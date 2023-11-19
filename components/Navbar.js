@@ -1,4 +1,3 @@
-// Navbar.js
 import { useState } from "react";
 import Link from "next/link";
 
@@ -46,16 +45,13 @@ const Navbar = () => {
           </span>
         </button>
         <div className="m-auto text-white text-xl pr-20 font-semibold">
-          {/* Tu logo aquí */}
           <span>Noticias</span>
         </div>
       </div>
 
-      {/* Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transition-opacity duration-300 ease-in-out">
           <div className="flex justify-end p-5">
-            {/* Botón para cerrar el menú con un tamaño más grande */}
             <button
               className="text-white focus:outline-none m-2 text-2xl"
               onClick={toggleMenu}
@@ -65,14 +61,12 @@ const Navbar = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            {/* Lista de enlaces del menú con un tamaño más grande */}
             <Link href="/1" className="text-white py-14 ml-5 text-xl scale-150">
               Enlace 1
             </Link>
             <Link href="/2" className="text-white py-14 ml-5 text-xl scale-150">
               Enlace 2
             </Link>
-            {/* Agrega más enlaces según sea necesario */}
             <Link href="/3" className="text-white py-14 ml-5 text-xl scale-150">
               Enlace 3
             </Link>

@@ -10,9 +10,7 @@ const Entradas = () => {
     // Lógica para obtener datos de la API
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://vitalvibe.net/wp-json/wp/v2/posts"
-        );
+        const response = await axios.get(process.env.WORDPRESS_API_URL);
         setPosts(response.data);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
