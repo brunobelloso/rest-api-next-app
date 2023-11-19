@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 const Clima = () => {
   const [clima, setClima] = useState(null);
   const [error, setError] = useState(null);
@@ -7,7 +9,7 @@ const Clima = () => {
       try {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(async (position) => {
-            const apiKey = process.env.OPENWEATHER_API_KEY;
+            const apiKey = "a0601791bc2f64d020653ec50196131f";
 
             const respuesta = await fetch(
               `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
