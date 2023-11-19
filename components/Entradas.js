@@ -9,7 +9,7 @@ const Entradas = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiUrl = URL_BLOG_WORDPRESS;
+        const apiUrl = "http://vitalvibe.net/wp-json/wp/v2/posts";
         const response = await axios.get(`${apiUrl}`);
         setPosts(response.data);
       } catch (error) {
