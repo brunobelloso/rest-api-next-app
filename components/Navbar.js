@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transition-opacity duration-300 ease-in-out">
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
           <div className="flex justify-end p-5">
             <button
               className="text-white focus:outline-none m-2 text-2xl"
@@ -60,7 +60,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center overflow-y-auto">
             <Link href="/1" className="text-white py-14 ml-5 text-xl scale-150">
               Enlace 1
             </Link>

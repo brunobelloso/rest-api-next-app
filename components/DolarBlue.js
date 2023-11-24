@@ -24,7 +24,7 @@ const DolarBlue = () => {
   }
 
   if (!dolarBlueData) {
-    return null; // O podrías retornar un mensaje de carga si lo prefieres.
+    return null; 
   }
 
   return (

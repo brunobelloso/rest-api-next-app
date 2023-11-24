@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-4 text-center fixed bottom-0 w-full">
+    <footer className="bg-gray-800 mt-10 text-white p-4 text-center fixed bottom-0 w-full">
       {/* Contenido del pie de página con un enlace a LinkedIn */}
       <p className="text-sm">
         © 2023 Hecho por{' '}
