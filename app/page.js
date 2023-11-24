@@ -13,7 +13,11 @@ const Page = () => {
       <DolarBlue />
       <Clima/>
       </div>
+      <div className="grid">
       <Entradas/>
+      <Entradas/>
+      </div>
+      <div className="h-24"></div>
       <Footer />
     </div>
   );
