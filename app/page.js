@@ -7,15 +7,15 @@ import Entradas from "../components/Entradas";
 
 const Page = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex justify-center mt-4">
-      <DolarBlue />
-      <Clima/>
+      <div className="md:flex md:justify-center mt-2">
+        <DolarBlue className="md:mr-4" /> {/* Margen a la derecha en resoluciones mayores */}
+        <Clima className="md:ml-4 mt-4 md:mt-0" /> {/* Margen a la izquierda en resoluciones mayores */}
       </div>
       <div className="grid">
-      <Entradas/>
-      <Entradas/>
+        <Entradas />
+        <Entradas />
       </div>
       <div className="h-24"></div>
       <Footer />

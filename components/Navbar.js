@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -10,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative bg-gray-800 p-4">
+    <div className="sticky top-0 relative bg-gray-800 p-4">
       <div className="flex items-center justify-between">
         <button
           className={`text-white flex items-center focus:outline-none p-2 ${
@@ -45,34 +44,19 @@ const Navbar = () => {
           </span>
         </button>
         <div className="m-auto text-white text-xl pr-20 font-semibold">
-          <span>Noticias</span>
+          <h1>Noticias</h1>
         </div>
       </div>
 
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
-          <div className="flex justify-end p-5">
+          <div className="flex justify-end p-6">
             <button
-              className="text-white focus:outline-none m-2 text-2xl"
+              className="text-white focus:outline-none text-2xl"
               onClick={toggleMenu}
             >
               ✕ CERRAR
             </button>
-          </div>
-
-          <div className="flex flex-col items-center overflow-y-auto">
-            <Link href="/1" className="text-white py-14 ml-5 text-xl scale-150">
-              Enlace 1
-            </Link>
-            <Link href="/2" className="text-white py-14 ml-5 text-xl scale-150">
-              Enlace 2
-            </Link>
-            <Link href="/3" className="text-white py-14 ml-5 text-xl scale-150">
-              Enlace 3
-            </Link>
-            <Link href="/4" className="text-white py-14 ml-5 text-xl scale-150">
-              Enlace 4
-            </Link>
           </div>
         </div>
       )}

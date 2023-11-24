@@ -27,8 +27,9 @@ const Clima = () => {
             }
           });
         } else {
-          setError('Geolocalización no es compatible en este navegador.');
-          console.error('Geolocalización no es compatible en este navegador.');
+          const geolocationError = 'Geolocalización no es compatible en este navegador.';
+          setError(geolocationError);
+          console.error(geolocationError);
         }
       } catch (error) {
         setError('Error en la solicitud.');
